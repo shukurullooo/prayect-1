@@ -12,25 +12,25 @@ const Header = () => {
 
   return (
     <header className="relative">
-      <nav className="container flex justify-between items-center py-4">
-        <div>
+      <nav className="container flex justify-between items-center py-4 ">
+        <div className='mt-[10px] py-1'>
           <NavLink to={"/"}>
             <img src={logo} alt="logo" className="" />
           </NavLink>
         </div>
 
-        <ul className="hidden md:flex items-center gap-5">
+        <ul className="hidden md:flex items-center gap-[75px] mt-[10px]">
           <li><NavLink to={"/"}>Home</NavLink></li>
           <li><NavLink to={"/shop"}>Shop</NavLink></li>
           <li><NavLink to={"/about"}>About</NavLink></li>
           <li><NavLink to={"/contact"}>Contact</NavLink></li>
         </ul>
 
-        <div className="hidden md:flex items-center gap-3">
-          <button><img src={person} alt="user" /></button>
-          <button><img src={seorch} alt="search" /></button>
-          <button><img src={yurak} alt="like" /></button>
-          <button><img src={shop} alt="shop" /></button>
+        <div className="hidden md:flex items-center gap-[20px] mt-[10px]">
+          <button><img src={person} alt="" /></button>
+          <button><img src={seorch} alt="" /></button>
+          <button><img src={yurak} alt="" /></button>
+          <button><img src={shop} alt="" /></button>
         </div>
 
         <button className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>

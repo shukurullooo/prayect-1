@@ -27,20 +27,20 @@ const OurPradacts = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 py-10 mt-[56px]">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Our Products</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {allProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-white rounded shadow hover:shadow-md  flex flex-col"
+            className="bg-white shadow hover:shadow-md  flex flex-col"
           >
             <img
               onClick={() => navigate(`/product/${product.id}`)}
               src={product.thumbnail}
               alt={product.title}
-              className="w-full h-48 object-cover cursor-pointer rounded"
+              className="w-full h-48 object-cover cursor-pointer "
             />
 
             <div className="bg-[#F4F5F7] p-4 mt-4 flex-1 flex flex-col justify-between">
