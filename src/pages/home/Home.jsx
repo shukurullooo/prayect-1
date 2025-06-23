@@ -7,12 +7,12 @@ const Home = () => {
   return (
 
     <>
-    <div className="relative w-full container mx-auto">
-      <img src={homeBg} alt="Home background" className="w-full h-auto mt-5" />
+    <div className="relative w-full  mx-auto">
 
+      <img src={homeBg} alt="Home background" className="w-full h-auto mt-5" />
       <div
         className="
-          absolute top-1/2 left-1/2 
+          absolute top-1/2 left-1/2
           transform -translate-x-1/2 -translate-y-1/2 
           z-10 
           w-[80%] sm:w-[440px] md:w-[550px] lg:w-[663px]

@@ -1,6 +1,6 @@
 import { useProduct } from "@/api/hooks/useProduct";
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const PAGE_SIZE = 12;
 
@@ -59,7 +59,8 @@ const OurPradacts = () => {
             onClick={handleShowMore}
             disabled={isLoading}
           >
-            {isLoading ? "Loading..." : "Show more"}
+    <NavLink to={"/shop"} onClick={() => setMenuOpen(false)}>Shop</NavLink>
+            
           </button>
         </div>
       )}

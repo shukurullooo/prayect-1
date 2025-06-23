@@ -30,11 +30,15 @@ const Shop = () => {
     <div>
       <h2>Shop</h2>
       {/* <Products data={data?.data?.products}/> */}
-      <div className="grid grid-cols-4">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {data?.data?.products?.map((product) => (
-          <div key={product.id}>
-            <img onClick={()=> navigate(`/product/${product.id}`)} src={product.thumbnail} alt="" />
-            <h3>{product.title}</h3>
+          <div key={product.id} className="bg-white shadow hover:shadow-md flex flex-col">
+            <img onClick={() => navigate(`/product/${product.id}`)} src={product.thumbnail} alt="" />
+            <div className="bg-[#F4F5F7] p-4 mt-4 flex-1 flex flex-col justify-between">
+              <h3 className="text-lg font-semibold mb-1">{product.title}</h3>
+              <p className="text-gray-500 text-sm truncate">{product.brand}</p>
+              <p className="text-lg font-bold mt-2">${product.price}</p>
+            </div>
           </div>
         ))}
       </div>
